@@ -8,7 +8,7 @@ export function AppButton({ children, onClick, variant = 'primary', disabled = f
   return <motion.button whileTap={{ scale: .97 }} transition={spring} className={`app-button ${variant} ${className}`} onClick={onClick} disabled={disabled}>{Icon && <Icon size={19} strokeWidth={2.1} />}{children}</motion.button>
 }
 export function IconButton({ icon: Icon, onClick, label, className = '' }: { icon: LucideIcon; onClick: () => void; label: string; className?: string }) {
-  return <motion.button whileTap={{ scale: .9 }} aria-label={label} title={label} className={`icon-button ${className}`} onClick={onClick}><Icon size={21} strokeWidth={2} /></motion.button>
+  return <motion.button whileTap={{ scale: .9 }} aria-label={label} title={label} className={`icon-button ${className}`} onClick={onClick}><Icon size={20} strokeWidth={2} /></motion.button>
 }
 export function PageHeader({ title, onBack, right }: { title: string; onBack: () => void; right?: ReactNode }) {
   return <header className="page-header"><IconButton icon={ArrowLeft} label="Назад" onClick={onBack} /><h1>{title}</h1><div className="page-header-right">{right}</div></header>
