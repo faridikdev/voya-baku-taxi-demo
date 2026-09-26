@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.playwright-cli/
+*.tsbuildinfo
+.sites-runtime/
+.env
+.env.local

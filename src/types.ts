@@ -1,0 +1,9 @@
+export type RideStage = 'idle' | 'selectingPickup' | 'selectingDestination' | 'routePreview' | 'selectingRide' | 'confirming' | 'searchingDriver' | 'driverFound' | 'driverApproaching' | 'driverArrived' | 'rideStarted' | 'inProgress' | 'rideCompleted' | 'processingPayment' | 'paymentSuccess' | 'rating' | 'finished' | 'cancelled' | 'searchError' | 'paymentError'
+export type Tab = 'home' | 'trips' | 'notifications' | 'profile'
+export type Place = { id: string; name: string; address: string; distance: string; x: number; y: number }
+export type RideOption = { id: string; name: string; eta: number; seats: number; price: number; kind: 'compact' | 'sedan' | 'premium' | 'xl' }
+export type Driver = { id: string; name: string; rating: string; car: string; color: string; plate: string; initials: string }
+export type PaymentMethod = 'apple' | 'cash' | 'card'
+export type Trip = { id: string; date: string; pickup: Place; destination: Place; price: number; duration: number; distance: number; driver: Driver; payment: PaymentMethod; rating?: number }
+export type User = { firstName: string; lastName: string; phone: string; email?: string }
+export type Notice = { id: string; title: string; body: string; time: string; unread: boolean; type: 'ride' | 'offer' }
